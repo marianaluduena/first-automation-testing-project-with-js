@@ -20,6 +20,6 @@
 
 - **Javascript** to automate the tests.
   
-- **Bug Magnet** to document evidence.
+- **Bug Magnet**, **Exploratory Session Report** and **Screen To Gif** to document evidence.
   
 - **Jira** as the management tool.
