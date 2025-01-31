@@ -5,7 +5,7 @@
 
 - There's no documentation for this project, so the BR (business rules), acceptance criteria and requirements will be added after previous exploratory tests.
 
--Project's URL: https://bookcart.azurewebsites.net
+- Project's URL: https://bookcart.azurewebsites.net
 
 
 ## Approach
