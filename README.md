@@ -1,11 +1,11 @@
 # Automation-testing-project-with-js
 
-- The SUT (Software under test) is Book Cart, an e-commerce. This project will be tested with Javascript to automate the tests.
+- The SUT (Software Under Test) is Book Cart, an e-commerce. This project will be tested with Javascript to automate the tests.
 
 
 - There's no documentation for this project, so the BR (business rules), acceptance criteria and requirements will be added after previous exploratory tests.
 
-- Project's URL: https://bookcart.azurewebsites.net
+- Project URL: https://bookcart.azurewebsites.net
 
 
 ## Approach
