@@ -1,5 +1,16 @@
+/** 
+ BR Class NewUser:
 
-class NewUser{
+- Must have name, last name, user name, password, confirm password and specify gender.
+
+- Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number.
+
+- Gender Male or Female must be specified to send the form. 
+
+ */
+
+
+class NewUser {
 
     #name = "Nameless";
     #lastName = "Unknown";
@@ -7,68 +18,83 @@ class NewUser{
     #password = "123";
     #confirmPassword = "123";
     #gender = "Female";
+    #id = 1; // Every user must have an ID
 
-// Setters and getters to access then the variables 
+    // Here will be every user ID stored
 
+    static userId = [];
 
-set name(value){
-
-    this.#name = value;
-}
-
-
-get name(){
-
-    return this.#name;
-}
+    // Setters and getters to access then the variables 
 
 
-set lastName(value){
+    set name(value) {
 
-    this.#lastName = value;
-}
-
-get lastName(){
-
-    return this.#lastName;
-}
-
-set userName(value){
-
-    this.#userName = value;
-}
+        this.#name = value;
+    }
 
 
-get userName(){
+    get name() {
 
-    return this.#userName;
-}
-
-
-// For security reasons, just the getters for password and confirm password will be here
-
-get password(){
-
-    return this.#password;
-}
+        return this.#name;
+    }
 
 
-get confirmPassword(){
+    set lastName(value) {
 
-    return this.#confirmPassword;
-}
+        this.#lastName = value;
+    }
+
+    get lastName() {
+
+        return this.#lastName;
+    }
+
+    set userName(value) {
+
+        this.#userName = value;
+    }
 
 
-set gender(value){
+    get userName() {
 
-    this.#gender = value;
-}
+        return this.#userName;
+    }
 
 
-get gender(){
+    // For security reasons, just the getters for password and confirm password will be here
 
-    return this.#gender;
-}
+    get password() {
+
+        return this.#password;
+    }
+
+
+    get confirmPassword() {
+
+        return this.#confirmPassword;
+    }
+
+
+    set gender(value) {
+
+        this.#gender = value;
+    }
+
+
+    get gender() {
+
+        return this.#gender;
+    }
+
+    set id(value) {
+
+        this.#id = value;
+    }
+
+    get id() {
+
+        return this.#id;
+    }
 
 }
 

@@ -2,17 +2,17 @@ import NewUser from "../classes/newUser.js";
 
 /**
  * 
-Class NewUser:
+Class BR:
 
-- Must have name, last name, user name, password, confirm password and specify gender.
+- There must be a function to save the new user account.
 
-- Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number.
+- There must be a function to show a message to the user when their account was successfully created.
 
-- Gender Male or Female must be specified to send the form. 
+- There must be a function to find any user by ID.
 
  */
 
-class BR{
+class BR {
 
 // Save new user
 
@@ -25,6 +25,21 @@ static saveNewUser(newUser){
 
 console.log(`User ${newUser.userName} successfully registered`);
 
+}
+
+// Find user by ID
+
+/**
+ * @param {Number} id of a user
+ * @returns the user's id
+ */
+
+static findUserById(id){
+
+    const users = NewUser.userId;
+    const userId = users.find((objUser) => objUser.id == id);
+
+    return userId;
 }
 
 }
