@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The SUT (Software Under Test) is Book Cart, an e-commerce. This project will be tested with Javascript to automate the tests.",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "tests"
   },

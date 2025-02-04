@@ -14,10 +14,21 @@ class NewUser {
     #name = "Nameless";
     #lastName = "Unknown";
     #userName = "empty";
-    #password = "123";
-    #confirmPassword = "123";
+    #password;
+    #confirmPassword;
     #gender = "Female";
     #id = 1; // Every user must have an ID
+   
+
+   // Method to assign later a password without breaking the encapsulation concept
+ 
+   constructor (password, confirmPassword) { 
+
+    this.#password = password;
+    this.#confirmPassword = confirmPassword;
+
+    }
+
 
     // Here will be every user ID stored
 
