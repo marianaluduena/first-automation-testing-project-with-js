@@ -96,14 +96,14 @@ class NewUser {
         return this.#id;
     }
 
-    fillRegisterForm() {
+    fillRegisterForm () {
 
-        console.log(`First Name: ${this.#name}. 
-        Last Name: ${this.#lastName}. 
-        Username: ${this.#userName}. 
-        Password: ${this.#password}.
-        Confirm password: ${this.#confirmPassword}.
-        Gender: ${this.#gender}`
+        console.log(`First Name: ${this.name}. 
+        Last Name: ${this.lastName}. 
+        Username: ${this.userName}. 
+        Password: ${this.password}.
+        Confirm password: ${this.confirmPassword}.
+        Gender: ${this.gender}`
         );
     }
 
