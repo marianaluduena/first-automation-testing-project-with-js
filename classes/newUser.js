@@ -9,7 +9,6 @@
 
  */
 
-
 class NewUser {
 
     #name = "Nameless";
@@ -108,5 +107,6 @@ class NewUser {
     }
 
 }
+
 
 export default NewUser;
