@@ -1,5 +1,7 @@
 import NewUser from "../classes/newUser.js";
+import BR from "../business_rules/business_rules.js";
 
+// HAPPY PATH TEST
 
 let objUser = new NewUser("j-Watson-123", "j-Watson-123");
 
@@ -8,7 +10,13 @@ objUser.lastName ="Watson";
 objUser.userName = "j-Watson";
 objUser.gender = "Male";
 
+objUser.fillRegisterForm();
+
 if (objUser.password == "j-Watson-123"){
+
+ // saveNewUser is a static function, that's why I call it directly by naming it's class BR
+
+    BR.saveNewUser(objUser);
 
 console.log("Password successfully created. TEST PASSED");
 
@@ -24,25 +32,31 @@ objUser.confirmPassword = "doctor-Watson";
 
 */
 
-
-objUser.fillRegisterForm();
-//objUser.saveNewUser();
+// NEGATIVE TEST CASE WITH NOT MATHCING PASSWORD FORMAT
 
 objUser = new NewUser("123", "123");
-
-if (objUser.password == "123"){
-
-    console.log("Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number. TEST FAILED");
-
-    
-    } else {
-    
-        console.log("Password successfully created. TEST PASSED");
-    }
 
 objUser.name = "Anna";
 objUser.lastName = "Schwab";
 objUser.userName = "a_schwab";
 objUser.gender = "Female";
+
 objUser.fillRegisterForm();
+
+if (objUser.password == "123"){
+
+    console.log("Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number. TEST FAILED");
+   
+    } else {
+
+         // The new user will be successfully stored only if the password matches a valid format
+
+         BR.saveNewUser(objUser);
+    
+        console.log("Password successfully created. TEST PASSED");
+ 
+       
+    }
+
+
 
