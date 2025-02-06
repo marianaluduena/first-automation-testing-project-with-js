@@ -12,7 +12,7 @@ Class BR:
 
  */
 
-class BR {
+class BR_Register {
 
 // Save new user
 
@@ -44,4 +44,4 @@ static findUserById(id){
 
 }
 
-export default BR;
+export default BR_Register;

@@ -1,5 +1,5 @@
 import NewUser from "../classes/newUser.js";
-import BR from "../business_rules/business_rules.js";
+import BR_Register from "../business_rules/br_register.js";
 
 // HAPPY PATH TEST
 
@@ -16,7 +16,7 @@ if (objUser.password == "j-Watson-123"){
 
  // saveNewUser is a static function, that's why I call it directly by naming it's class BR
 
-    BR.saveNewUser(objUser);
+    BR_Register.saveNewUser(objUser);
 
 console.log("Password successfully created. TEST PASSED");
 
@@ -51,7 +51,7 @@ if (objUser.password == "123"){
 
          // The new user will be successfully stored only if the password matches a valid format
 
-         BR.saveNewUser(objUser);
+         BR_Register.saveNewUser(objUser);
     
         console.log("Password successfully created. TEST PASSED");
  
