@@ -3,7 +3,7 @@ import BR_Register from "../business_rules/br_register.js";
 
 // HAPPY PATH TEST
 
-let objUser = new NewUser("j-Watson-123", "j-Watson-123");
+let objUser = new NewUser("j-Watson-123", "j-Watson-123"); // pass and confirm pass are this way, because they don't have setters being sensitive data
 
 objUser.name = "John";
 objUser.lastName ="Watson";

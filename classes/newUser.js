@@ -108,7 +108,9 @@ class NewUser {
 
     fillRegisterForm () {
 
-        console.log(`First Name: ${this.name}. 
+        console.log(
+            
+        `First Name: ${this.name}. 
         Last Name: ${this.lastName}. 
         Username: ${this.userName}. 
         Password: ${this.password}.
