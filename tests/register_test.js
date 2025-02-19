@@ -71,17 +71,17 @@ objUser.gender = "Female";
 
 objUser.fillRegisterForm();
 
-if (objUser.name || objUser.lastName == Number){
+if (objUser.password == "123"){
 
-    console.log("Character type not allowed. Just text format. TEST FAILED");
+    console.log("Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number. TEST PASSED");
    
     } else {
 
-         // The new user will be successfully stored only if the name and last name match a text format
+         // The new user will be successfully stored only if the password matches a valid format.
 
          BR_Register.saveNewUser(objUser);
     
-        console.log("User successfully registered. TEST PASSED");
+        console.log("User successfully registered. TEST FAILED");
  
        
     }
@@ -110,3 +110,18 @@ objUser.userName = "tester";
 objUser.gender = "Male";
 
 objUser.fillRegisterForm();
+
+if (objUser.name || objUser.lastName == Number){
+
+    console.log("Character type not allowed. Just text format. TEST PASSED");
+   
+    } else {
+
+         // The new user will be successfully stored.
+
+         BR_Register.saveNewUser(objUser);
+    
+        console.log("User successfully registered. TEST FAILED");
+ 
+       
+    }
