@@ -25,14 +25,14 @@ console.log("Password successfully created. TEST PASSED");
     console.log("Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number. TEST FAILED");
 }
 
-/* Never do this:
+/* Never do this, it won't work because password and confirm password don't have setters being sensitive data:
 
 objUser.password = "doctor-Watson";
 objUser.confirmPassword = "doctor-Watson";
 
 */
 
-// NEGATIVE TEST CASE WITH NOT MATHCING PASSWORD FORMAT
+// NEGATIVE TEST CASE: NOT MATHCING PASSWORD FORMAT
 
 objUser = new NewUser("123", "123");
 
@@ -43,20 +43,29 @@ objUser.gender = "Female";
 
 objUser.fillRegisterForm();
 
-if (objUser.password == "123"){
+if (objUser.name || objUser.lastName == Number){
 
-    console.log("Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter and 1 number. TEST FAILED");
+    console.log("Character type not allowed. Just text format. TEST FAILED");
    
     } else {
 
-         // The new user will be successfully stored only if the password matches a valid format
+         // The new user will be successfully stored only if the name and last name match a text format
 
          BR_Register.saveNewUser(objUser);
     
-        console.log("Password successfully created. TEST PASSED");
+        console.log("User successfully registered. TEST PASSED");
  
        
     }
 
 
+// NEGATIVE TEST CASE: Numbers in Name and Last Name fields
 
+objUser = new NewUser("justTest1", "justTest1");
+
+objUser.name = "123";
+objUser.lastName = "123";
+objUser.userName = "tester";
+objUser.gender = "Male";
+
+objUser.fillRegisterForm();
